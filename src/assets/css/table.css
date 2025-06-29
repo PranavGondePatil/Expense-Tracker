@@ -1,0 +1,505 @@
+/* Modern Table Styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Responsive Table Container */
+.rwd-table {
+  margin: 0 0 2rem 0;
+  min-width: 300px;
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+  font-family: 'Inter', sans-serif;
+  animation: slideInUp 0.5s ease-out;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Table Header */
+.rwd-table thead {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.rwd-table th {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 20px 16px;
+  text-align: left;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  vertical-align: middle;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.rwd-table th:first-child {
+  border-top-left-radius: 16px;
+}
+
+.rwd-table th:last-child {
+  border-top-right-radius: 16px;
+}
+
+/* Table Body */
+.rwd-table tbody tr {
+  border-bottom: 1px solid #f1f5f9;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.rwd-table tbody tr:hover {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.rwd-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.rwd-table td {
+  padding: 18px 16px;
+  color: #1e293b !important;
+  font-size: 14px;
+  line-height: 1.5;
+  vertical-align: middle;
+  text-align: left;
+  font-weight: 500;
+}
+
+/* Table Cell Styling */
+.rwd-table td:first-child {
+  font-weight: 700 !important;
+  color: #0f172a !important;
+}
+
+.rwd-table td[data-th="Amount"] {
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+  color: #059669 !important;
+  text-align: right;
+}
+
+.rwd-table td[data-th="Amount"].expense {
+  color: #dc2626 !important;
+}
+
+.rwd-table td[data-th="Category"] {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.rwd-table td[data-th="Category"] i {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 12px;
+  color: white;
+  flex-shrink: 0;
+}
+
+/* Category Icons with Colors */
+.rwd-table td[data-th="Category"] i.fa-gift {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.rwd-table td[data-th="Category"] i.fa-cutlery {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.rwd-table td[data-th="Category"] i.fa-shopping-cart {
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+.rwd-table td[data-th="Category"] i.fa-motorcycle {
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+}
+
+.rwd-table td[data-th="Category"] i.fa-get-pocket {
+  background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+}
+
+.rwd-table td[data-th="Category"] i.fa-film {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.rwd-table td[data-th="Category"] i.fa-shopping-bag {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.rwd-table td[data-th="Category"] i.fa-plane {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.rwd-table td[data-th="Category"] i.fa-user-md {
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+.rwd-table td[data-th="Category"] i.fa-medkit {
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+}
+
+.rwd-table td[data-th="Category"] i.fa-columns {
+  background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+}
+
+.rwd-table td[data-th="Category"] i.fa-circle-o {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Action Buttons */
+.rwd-table td[data-th="Actions"] {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.rwd-table .action-btn {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  min-width: 60px;
+  text-align: center;
+}
+
+.rwd-table .edit-btn {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: #ffffff !important;
+}
+
+.rwd-table .edit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+}
+
+.rwd-table .delete-btn {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  color: #ffffff !important;
+}
+
+.rwd-table .delete-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);
+}
+
+/* Mobile Responsive */
+@media (max-width: 767px) {
+  .rwd-table {
+    border-radius: 12px;
+    margin: 0 0 1rem 0;
+  }
+  
+  .rwd-table thead {
+    display: none;
+  }
+  
+  .rwd-table tbody tr {
+    display: block;
+    margin-bottom: 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .rwd-table tbody tr:hover {
+    transform: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .rwd-table td {
+    display: block;
+    text-align: right;
+    padding: 12px 16px;
+    border-bottom: 1px solid #f1f5f9;
+    color: #1e293b !important;
+    font-weight: 500;
+  }
+  
+  .rwd-table td:last-child {
+    border-bottom: none;
+  }
+  
+  .rwd-table td:before {
+    content: attr(data-th) ": ";
+    font-weight: 700;
+    color: #0f172a !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 12px;
+    float: left;
+  }
+  
+  .rwd-table td[data-th="Actions"] {
+    justify-content: flex-end;
+  }
+  
+  .rwd-table .action-btn {
+    padding: 6px 10px;
+    font-size: 11px;
+    min-width: 50px;
+  }
+  
+  .rwd-table td[data-th="Amount"] {
+    font-weight: 700;
+    font-size: 16px;
+  }
+}
+
+/* Empty State */
+.rwd-table .empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: #64748b;
+}
+
+.rwd-table .empty-state i {
+  font-size: 48px;
+  margin-bottom: 16px;
+  color: #cbd5e1;
+}
+
+.rwd-table .empty-state h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #374151;
+}
+
+.rwd-table .empty-state p {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* Loading State */
+.rwd-table .loading-row {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.rwd-table .loading-row .spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #e2e8f0;
+  border-top: 2px solid #667eea;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Table Footer */
+.rwd-table tfoot {
+  background: #f8fafc;
+  border-top: 2px solid #e2e8f0;
+}
+
+.rwd-table tfoot td {
+  padding: 16px;
+  font-weight: 700;
+  color: #0f172a !important;
+  text-align: right;
+}
+
+/* Summary Row */
+.rwd-table .summary-row {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+.rwd-table .summary-row td {
+  font-weight: 700;
+  color: #0f172a !important;
+}
+
+/* Status Indicators */
+.rwd-table .status {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.rwd-table .status.pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.rwd-table .status.completed {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.rwd-table .status.cancelled {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* Print Styles */
+@media print {
+  .rwd-table {
+    box-shadow: none;
+    border: 1px solid #000;
+  }
+  
+  .rwd-table thead {
+    background: #f3f4f6 !important;
+  }
+  
+  .rwd-table tbody tr {
+    border-bottom: 1px solid #000;
+  }
+  
+  .rwd-table .action-btn {
+    display: none;
+  }
+  
+  .rwd-table td[data-th="Actions"] {
+    display: none;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .rwd-table {
+    background: #1e293b;
+    border-color: #334155;
+  }
+  
+  .rwd-table tbody tr {
+    border-bottom-color: #334155;
+  }
+  
+  .rwd-table tbody tr:hover {
+    background: linear-gradient(135deg, #334155 0%, #475569 100%);
+  }
+  
+  .rwd-table td {
+    color: #f1f5f9 !important;
+  }
+  
+  .rwd-table td:first-child {
+    color: #ffffff !important;
+  }
+  
+  .rwd-table tfoot {
+    background: #334155;
+    border-top-color: #475569;
+  }
+  
+  .rwd-table .empty-state {
+    color: #94a3b8;
+  }
+  
+  .rwd-table .empty-state h3 {
+    color: #e2e8f0;
+  }
+  
+  .rwd-table .empty-state p {
+    color: #cbd5e1;
+  }
+}
+
+/* Enhanced Text Visibility for Tables */
+.rwd-table th,
+.rwd-table td {
+  text-shadow: none;
+}
+
+.rwd-table th {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* High contrast text for better visibility */
+.rwd-table .high-contrast-text {
+  color: #0f172a !important;
+  font-weight: 700;
+}
+
+.rwd-table .high-contrast-text-on-light {
+  color: #0f172a !important;
+  font-weight: 700;
+}
+
+.rwd-table .high-contrast-text-on-dark {
+  color: #ffffff !important;
+  font-weight: 700;
+}
+
+/* Ensure table text is always visible */
+.rwd-table td,
+.rwd-table th {
+  color: inherit !important;
+}
+
+/* Night mode specific table improvements */
+[data-theme="dark"] .rwd-table {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+[data-theme="dark"] .rwd-table tbody tr {
+  border-bottom-color: #334155;
+}
+
+[data-theme="dark"] .rwd-table tbody tr:hover {
+  background: linear-gradient(135deg, #334155 0%, #475569 100%);
+}
+
+[data-theme="dark"] .rwd-table td {
+  color: #f1f5f9 !important;
+}
+
+[data-theme="dark"] .rwd-table td:first-child {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .rwd-table tfoot {
+  background: #334155;
+  border-top-color: #475569;
+}
+
+[data-theme="dark"] .rwd-table .empty-state {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .rwd-table .empty-state h3 {
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .rwd-table .empty-state p {
+  color: #cbd5e1;
+}

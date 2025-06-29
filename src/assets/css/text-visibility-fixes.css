@@ -1,0 +1,1642 @@
+/* Text Visibility Fixes - Ensures text is always visible */
+
+/* Global text visibility improvements */
+* {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Enhanced text contrast for all text elements */
+body, p, h1, h2, h3, h4, h5, h6, span, div, label, input, textarea, select {
+  color: #1e293b !important;
+  font-weight: 500;
+}
+
+/* Form elements with better contrast */
+input, textarea, select {
+  color: #1e293b !important;
+  background: #ffffff !important;
+  border: 2px solid #e2e8f0 !important;
+}
+
+input:focus, textarea:focus, select:focus {
+  color: #1e293b !important;
+  background: #ffffff !important;
+  border-color: #667eea !important;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1) !important;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #64748b !important;
+  font-weight: 400;
+}
+
+/* Table text visibility */
+.rwd-table th {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+.rwd-table td {
+  color: #1e293b !important;
+  font-weight: 500 !important;
+}
+
+.rwd-table td:first-child {
+  color: #0f172a !important;
+  font-weight: 700 !important;
+}
+
+.rwd-table td[data-th="Amount"] {
+  color: #059669 !important;
+  font-weight: 700 !important;
+}
+
+.rwd-table td[data-th="Amount"].expense {
+  color: #dc2626 !important;
+  font-weight: 700 !important;
+}
+
+/* Button text visibility */
+.btn, .form-btn, button {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Card text visibility */
+.card .card-block .card-title {
+  color: #1e293b !important;
+  font-weight: 700 !important;
+}
+
+.card .card-block .card-text {
+  color: #374151 !important;
+  font-weight: 500 !important;
+}
+
+/* Navigation text visibility */
+nav a {
+  color: #2c3e50 !important;
+  font-weight: 600 !important;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.1) !important;
+}
+
+nav a:hover {
+  color: #667eea !important;
+  font-weight: 700 !important;
+  text-shadow: 0 1px 3px rgba(102, 126, 234, 0.3) !important;
+}
+
+nav a.active {
+  color: #667eea !important;
+  font-weight: 700 !important;
+  text-shadow: 0 1px 3px rgba(102, 126, 234, 0.4) !important;
+}
+
+/* Navbar brand text */
+.navbar-brand {
+  color: #1e293b !important;
+  font-weight: 700 !important;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Navigation links in wide view */
+.navWide .wideDiv a {
+  color: #34495e !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+}
+
+.navWide .wideDiv a:hover {
+  color: #667eea !important;
+  font-weight: 600 !important;
+  transform: translateY(-1px) !important;
+}
+
+.navWide .wideDiv a.active {
+  color: #667eea !important;
+  font-weight: 600 !important;
+  border-bottom: 2px solid #667eea !important;
+}
+
+/* Navigation links in narrow view */
+.navNarrow .narrowLinks a {
+  color: #34495e !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+}
+
+.navNarrow .narrowLinks a:hover {
+  color: #667eea !important;
+  font-weight: 600 !important;
+  background: rgba(102, 126, 234, 0.1) !important;
+}
+
+.navNarrow .narrowLinks a.active {
+  color: #667eea !important;
+  font-weight: 600 !important;
+  background: rgba(102, 126, 234, 0.15) !important;
+}
+
+/* Form labels and text */
+.form-group label {
+  color: #0f172a !important;
+  font-weight: 700 !important;
+}
+
+.form p {
+  color: #374151 !important;
+  font-weight: 500 !important;
+}
+
+.form h2 {
+  color: #0f172a !important;
+  font-weight: 700 !important;
+}
+
+/* Success and error messages */
+.success-msg {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+}
+
+.error-msg {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Chart text improvements */
+canvas {
+  filter: contrast(1.1) brightness(1.05);
+}
+
+/* Dark mode text visibility */
+[data-theme="dark"] body,
+[data-theme="dark"] p,
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6,
+[data-theme="dark"] span,
+[data-theme="dark"] div,
+[data-theme="dark"] label {
+  color: #f1f5f9 !important;
+}
+
+[data-theme="dark"] input,
+[data-theme="dark"] textarea,
+[data-theme="dark"] select {
+  color: #f1f5f9 !important;
+  background: #334155 !important;
+  border-color: #475569 !important;
+}
+
+[data-theme="dark"] input:focus,
+[data-theme="dark"] textarea:focus,
+[data-theme="dark"] select:focus {
+  color: #f1f5f9 !important;
+  background: #475569 !important;
+  border-color: #667eea !important;
+}
+
+[data-theme="dark"] input::placeholder,
+[data-theme="dark"] textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+[data-theme="dark"] .rwd-table td {
+  color: #f1f5f9 !important;
+}
+
+[data-theme="dark"] .rwd-table td:first-child {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .card .card-block .card-title {
+  color: #f1f5f9 !important;
+}
+
+[data-theme="dark"] .card .card-block .card-text {
+  color: #e2e8f0 !important;
+}
+
+[data-theme="dark"] nav a {
+  color: #f4d680 !important;
+  font-weight: 600 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+[data-theme="dark"] .navbar-brand {
+  color: #9ad3cb !important;
+  font-weight: 700 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4) !important;
+}
+
+[data-theme="dark"] .navWide .wideDiv a {
+  color: #f4d680 !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+}
+
+[data-theme="dark"] .navWide .wideDiv a:hover {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.3) !important;
+}
+
+[data-theme="dark"] .navWide .wideDiv a.active {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  border-bottom: 2px solid #f4d680 !important;
+  text-shadow: 0 1px 3px rgba(244, 214, 128, 0.4) !important;
+}
+
+[data-theme="dark"] .navNarrow .narrowLinks a {
+  color: #f4d680 !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+}
+
+[data-theme="dark"] .navNarrow .narrowLinks a:hover {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  background: rgba(244, 214, 128, 0.2) !important;
+}
+
+[data-theme="dark"] .navNarrow .narrowLinks a.active {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  background: rgba(244, 214, 128, 0.25) !important;
+}
+
+[data-theme="dark"] .form-group label {
+  color: #f1f5f9 !important;
+}
+
+[data-theme="dark"] .form p {
+  color: #e2e8f0 !important;
+}
+
+[data-theme="dark"] .form h2 {
+  color: #f1f5f9 !important;
+}
+
+/* High contrast mode for accessibility */
+@media (prefers-contrast: high) {
+  * {
+    color: #000000 !important;
+    background: #ffffff !important;
+  }
+  
+  [data-theme="dark"] * {
+    color: #ffffff !important;
+    background: #000000 !important;
+  }
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus indicators for better accessibility */
+*:focus {
+  outline: 2px solid #667eea !important;
+  outline-offset: 2px !important;
+}
+
+/* Text selection styling */
+::selection {
+  background: #667eea !important;
+  color: #ffffff !important;
+}
+
+::-moz-selection {
+  background: #667eea !important;
+  color: #ffffff !important;
+}
+
+/* Ensure all interactive elements have proper contrast */
+a {
+  color: #667eea !important;
+  font-weight: 600 !important;
+}
+
+a:hover {
+  color: #764ba2 !important;
+  font-weight: 700 !important;
+}
+
+/* Specific fixes for common visibility issues */
+.text-muted {
+  color: #64748b !important;
+  font-weight: 500 !important;
+}
+
+.text-primary {
+  color: #667eea !important;
+  font-weight: 600 !important;
+}
+
+.text-success {
+  color: #059669 !important;
+  font-weight: 600 !important;
+}
+
+.text-warning {
+  color: #d97706 !important;
+  font-weight: 600 !important;
+}
+
+.text-danger {
+  color: #dc2626 !important;
+  font-weight: 600 !important;
+}
+
+/* Ensure icons are visible */
+i, .fa, .fas, .far, .fab {
+  color: inherit !important;
+}
+
+/* Fix for any remaining invisible text */
+* {
+  text-shadow: none !important;
+}
+
+/* Add subtle text shadow for better readability on complex backgrounds */
+.card .card-block .card-title,
+.rwd-table th,
+.btn,
+.form-btn,
+button {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
+}
+
+[data-theme="dark"] .card .card-block .card-title,
+[data-theme="dark"] .rwd-table th,
+[data-theme="dark"] .btn,
+[data-theme="dark"] .form-btn,
+[data-theme="dark"] button {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Settings page specific text visibility */
+.settings-page .card-title,
+.settings-page .card-text,
+.settings-page h5,
+.settings-page p,
+.settings-page label,
+.settings-page span {
+  color: #2c3e50 !important;
+  font-weight: 600 !important;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.3) !important;
+}
+
+.settings-page .form-group label {
+  color: #1e293b !important;
+  font-weight: 700 !important;
+}
+
+.settings-page .settings-header {
+  color: #2c3e50 !important;
+  font-weight: 700 !important;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.4) !important;
+}
+
+/* Dark mode settings page */
+[data-theme="dark"] .settings-page .card-title,
+[data-theme="dark"] .settings-page .card-text,
+[data-theme="dark"] .settings-page h5,
+[data-theme="dark"] .settings-page p,
+[data-theme="dark"] .settings-page label,
+[data-theme="dark"] .settings-page span {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+[data-theme="dark"] .settings-page .form-group label {
+  color: #f1f5f9 !important;
+  font-weight: 700 !important;
+}
+
+[data-theme="dark"] .settings-page .settings-header {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Popup form text visibility */
+.popup_inner .form-group label,
+.popup_inner_loan .form-group label {
+  color: #2c3e50 !important;
+  font-weight: 600 !important;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.3) !important;
+}
+
+.popup_inner .form-control,
+.popup_inner_loan .form-control {
+  color: #2c3e50 !important;
+  background: #ffffff !important;
+  border: 1px solid #d1d5db !important;
+  border-radius: 8px !important;
+  padding: 12px 16px !important;
+  font-size: 14px !important;
+  transition: all 0.3s ease !important;
+}
+
+.popup_inner .form-control:focus,
+.popup_inner_loan .form-control:focus {
+  border-color: #667eea !important;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1) !important;
+  outline: none !important;
+}
+
+.popup_inner textarea.form-control,
+.popup_inner_loan textarea.form-control {
+  min-height: 80px !important;
+  resize: vertical !important;
+}
+
+/* Dark mode popup form */
+[data-theme="dark"] .popup_inner .form-group label,
+[data-theme="dark"] .popup_inner_loan .form-group label {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+[data-theme="dark"] .popup_inner .form-control,
+[data-theme="dark"] .popup_inner_loan .form-control {
+  color: #f1f5f9 !important;
+  background: #334155 !important;
+  border: 1px solid #475569 !important;
+}
+
+[data-theme="dark"] .popup_inner .form-control:focus,
+[data-theme="dark"] .popup_inner_loan .form-control:focus {
+  border-color: #667eea !important;
+  background: #475569 !important;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2) !important;
+}
+
+/* Popup validation messages */
+.popup_inner .success-msg,
+.popup_inner_loan .success-msg {
+  color: #ffffff !important;
+  background: #10b981 !important;
+  font-weight: 600 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Edit Expense Popup Specific Styles - Highest Priority */
+.edit-expense-popup-overlay {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  backdrop-filter: blur(10px) !important;
+  z-index: 999999 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 10px !important;
+  box-sizing: border-box !important;
+  overflow: auto !important;
+}
+
+.edit-expense-popup-container {
+  position: relative !important;
+  width: 100% !important;
+  max-width: 550px !important;
+  max-height: 85vh !important;
+  background: #ffffff !important;
+  border-radius: 12px !important;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.5) !important;
+  overflow: hidden !important;
+  display: flex !important;
+  flex-direction: column !important;
+  animation: slideInUp 0.3s ease-out !important;
+  margin: auto !important;
+  z-index: 1000000 !important;
+}
+
+.edit-expense-popup-container .addExpenseHeader {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: #ffffff !important;
+  padding: 16px 20px !important;
+  border-radius: 12px 12px 0 0 !important;
+  font-weight: 700 !important;
+  text-align: center !important;
+  font-size: 1.3rem !important;
+  flex-shrink: 0 !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+  position: relative !important;
+}
+
+.edit-expense-popup-container #closePopup {
+  position: absolute !important;
+  top: 12px !important;
+  right: 12px !important;
+  background: rgba(255, 255, 255, 0.25) !important;
+  border: none !important;
+  color: #ffffff !important;
+  font-size: 18px !important;
+  font-weight: bold !important;
+  width: 36px !important;
+  height: 36px !important;
+  border-radius: 50% !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.3s ease !important;
+  z-index: 1000001 !important;
+}
+
+.edit-expense-popup-container #closePopup:hover {
+  background: rgba(255, 255, 255, 0.4) !important;
+  transform: scale(1.1) !important;
+}
+
+/* Dark mode edit popup */
+[data-theme="dark"] .edit-expense-popup-container {
+  background: #2c3e50 !important;
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .edit-expense-popup-container .addExpenseHeader {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .edit-expense-popup-container #closePopup {
+  color: #ffffff !important;
+}
+
+/* Responsive design for edit popup */
+@media (max-width: 768px) {
+  .edit-expense-popup-overlay {
+    padding: 5px !important;
+  }
+  
+  .edit-expense-popup-container {
+    max-width: 100% !important;
+    max-height: 90vh !important;
+    margin: 10px !important;
+  }
+  
+  .edit-expense-popup-container .addExpenseHeader {
+    font-size: 1.2rem !important;
+    padding: 14px 16px !important;
+  }
+  
+  .edit-expense-popup-container #closePopup {
+    top: 10px !important;
+    right: 10px !important;
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 16px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .edit-expense-popup-overlay {
+    padding: 2px !important;
+  }
+  
+  .edit-expense-popup-container {
+    max-height: 95vh !important;
+    margin: 5px !important;
+  }
+  
+  .edit-expense-popup-container .addExpenseHeader {
+    font-size: 1.1rem !important;
+    padding: 12px 14px !important;
+  }
+  
+  .edit-expense-popup-container #closePopup {
+    width: 28px !important;
+    height: 28px !important;
+    font-size: 14px !important;
+  }
+}
+
+/* Ensure form content is properly spaced */
+.edit-expense-popup-container form {
+  padding: 20px !important;
+  flex: 1 !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  max-height: calc(85vh - 80px) !important;
+}
+
+/* Force popup to be on top of everything - Highest Priority */
+.edit-expense-popup-overlay,
+.edit-expense-popup-container,
+.edit-expense-popup-container * {
+  z-index: 999999 !important;
+}
+
+/* Override any other z-index values */
+* {
+  z-index: auto !important;
+}
+
+.edit-expense-popup-overlay {
+  z-index: 999999 !important;
+}
+
+.edit-expense-popup-container {
+  z-index: 1000000 !important;
+}
+
+.edit-expense-popup-container #closePopup {
+  z-index: 1000001 !important;
+}
+
+/* Animation for popup */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Additional positioning fixes */
+.edit-expense-popup-overlay {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: 999999 !important;
+  pointer-events: auto !important;
+}
+
+.edit-expense-popup-container {
+  position: relative !important;
+  z-index: 1000000 !important;
+  pointer-events: auto !important;
+}
+
+/* Ensure navbar stays visible - remove body overflow hidden */
+.edit-expense-popup-overlay {
+  overflow: auto !important;
+}
+
+/* Force the popup to be rendered at the top level */
+.edit-expense-popup-overlay {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  z-index: 999999 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+/* Ensure the popup container is properly positioned */
+.edit-expense-popup-container {
+  position: relative !important;
+  z-index: 1000000 !important;
+  max-width: 550px !important;
+  width: 100% !important;
+  max-height: 85vh !important;
+  margin: auto !important;
+  background: #ffffff !important;
+  border-radius: 12px !important;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.5) !important;
+  overflow: hidden !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* Ensure navbar stays on top when popup is open */
+.navbar,
+.navbar *,
+.nav,
+.nav * {
+  z-index: 1000002 !important;
+  position: relative !important;
+}
+
+/* Ensure the popup doesn't interfere with navbar */
+.edit-expense-popup-overlay {
+  pointer-events: auto !important;
+}
+
+.edit-expense-popup-overlay *:not(.edit-expense-popup-container):not(.edit-expense-popup-container *) {
+  pointer-events: none !important;
+}
+
+/* Specific navbar z-index fixes */
+nav {
+  z-index: 1000002 !important;
+  position: relative !important;
+}
+
+.navWide,
+.navNarrow,
+.navbar-nav,
+.navbar-brand,
+.wideDiv,
+.narrowLinks {
+  z-index: 1000002 !important;
+  position: relative !important;
+}
+
+/* Ensure navbar links are clickable */
+.nav-link {
+  z-index: 1000003 !important;
+  position: relative !important;
+}
+
+/* Mobile navbar fixes */
+.navNarrow .fa-bars {
+  z-index: 1000003 !important;
+  position: relative !important;
+}
+
+.narrowLinks {
+  z-index: 1000004 !important;
+  position: relative !important;
+}
+
+/* Ensure the popup overlay doesn't block navbar interactions */
+.edit-expense-popup-overlay {
+  pointer-events: none !important;
+}
+
+.edit-expense-popup-overlay .edit-expense-popup-container {
+  pointer-events: auto !important;
+}
+
+/* Allow navbar to be clickable even when popup is open */
+nav,
+nav *,
+.navbar,
+.navbar * {
+  pointer-events: auto !important;
+}
+
+/* Savings Popup Styles - Same as Edit Expense Popup */
+.add-savings-popup-overlay,
+.edit-saving-popup-overlay {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  backdrop-filter: blur(10px) !important;
+  z-index: 999999 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 10px !important;
+  box-sizing: border-box !important;
+  overflow: auto !important;
+}
+
+.add-savings-popup-container,
+.edit-saving-popup-container {
+  position: relative !important;
+  width: 100% !important;
+  max-width: 550px !important;
+  max-height: 85vh !important;
+  background: #ffffff !important;
+  border-radius: 12px !important;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.5) !important;
+  overflow: hidden !important;
+  display: flex !important;
+  flex-direction: column !important;
+  animation: slideInUp 0.3s ease-out !important;
+  margin: auto !important;
+  z-index: 1000000 !important;
+}
+
+.add-savings-popup-container .addExpenseHeader,
+.edit-saving-popup-container .addExpenseHeader {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: #ffffff !important;
+  padding: 16px 20px !important;
+  border-radius: 12px 12px 0 0 !important;
+  font-weight: 700 !important;
+  text-align: center !important;
+  font-size: 1.3rem !important;
+  flex-shrink: 0 !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+  position: relative !important;
+}
+
+.add-savings-popup-container #closePopup,
+.edit-saving-popup-container #closePopup {
+  position: absolute !important;
+  top: 12px !important;
+  right: 12px !important;
+  background: rgba(255, 255, 255, 0.25) !important;
+  border: none !important;
+  color: #ffffff !important;
+  font-size: 18px !important;
+  font-weight: bold !important;
+  width: 36px !important;
+  height: 36px !important;
+  border-radius: 50% !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.3s ease !important;
+  z-index: 1000001 !important;
+}
+
+.add-savings-popup-container #closePopup:hover,
+.edit-saving-popup-container #closePopup:hover {
+  background: rgba(255, 255, 255, 0.4) !important;
+  transform: scale(1.1) !important;
+}
+
+/* Dark mode edit popup */
+[data-theme="dark"] .edit-expense-popup-container,
+[data-theme="dark"] .add-savings-popup-container,
+[data-theme="dark"] .edit-saving-popup-container {
+  background: #2c3e50 !important;
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .edit-expense-popup-container .addExpenseHeader,
+[data-theme="dark"] .add-savings-popup-container .addExpenseHeader,
+[data-theme="dark"] .edit-saving-popup-container .addExpenseHeader {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .edit-expense-popup-container #closePopup,
+[data-theme="dark"] .add-savings-popup-container #closePopup,
+[data-theme="dark"] .edit-saving-popup-container #closePopup {
+  color: #ffffff !important;
+}
+
+/* Responsive design for edit popup */
+@media (max-width: 768px) {
+  .edit-expense-popup-overlay,
+  .add-savings-popup-overlay,
+  .edit-saving-popup-overlay {
+    padding: 5px !important;
+  }
+  
+  .edit-expense-popup-container,
+  .add-savings-popup-container,
+  .edit-saving-popup-container {
+    max-width: 100% !important;
+    max-height: 90vh !important;
+    margin: 10px !important;
+  }
+  
+  .edit-expense-popup-container .addExpenseHeader,
+  .add-savings-popup-container .addExpenseHeader,
+  .edit-saving-popup-container .addExpenseHeader {
+    font-size: 1.2rem !important;
+    padding: 14px 16px !important;
+  }
+  
+  .edit-expense-popup-container #closePopup,
+  .add-savings-popup-container #closePopup,
+  .edit-saving-popup-container #closePopup {
+    top: 10px !important;
+    right: 10px !important;
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 16px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .edit-expense-popup-overlay,
+  .add-savings-popup-overlay,
+  .edit-saving-popup-overlay {
+    padding: 2px !important;
+  }
+  
+  .edit-expense-popup-container,
+  .add-savings-popup-container,
+  .edit-saving-popup-container {
+    max-height: 95vh !important;
+    margin: 5px !important;
+  }
+  
+  .edit-expense-popup-container .addExpenseHeader,
+  .add-savings-popup-container .addExpenseHeader,
+  .edit-saving-popup-container .addExpenseHeader {
+    font-size: 1.1rem !important;
+    padding: 12px 14px !important;
+  }
+  
+  .edit-expense-popup-container #closePopup,
+  .add-savings-popup-container #closePopup,
+  .edit-saving-popup-container #closePopup {
+    width: 28px !important;
+    height: 28px !important;
+    font-size: 14px !important;
+  }
+}
+
+/* Ensure form content is properly spaced */
+.edit-expense-popup-container form,
+.add-savings-popup-container form,
+.edit-saving-popup-container form {
+  padding: 20px !important;
+  flex: 1 !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  max-height: calc(85vh - 80px) !important;
+}
+
+/* Force popup to be on top of everything - Highest Priority */
+.edit-expense-popup-overlay,
+.edit-expense-popup-container,
+.edit-expense-popup-container *,
+.add-savings-popup-overlay,
+.add-savings-popup-container,
+.add-savings-popup-container *,
+.edit-saving-popup-overlay,
+.edit-saving-popup-container,
+.edit-saving-popup-container * {
+  z-index: 999999 !important;
+}
+
+/* Override any other z-index values */
+* {
+  z-index: auto !important;
+}
+
+.edit-expense-popup-overlay,
+.add-savings-popup-overlay,
+.edit-saving-popup-overlay {
+  z-index: 999999 !important;
+}
+
+.edit-expense-popup-container,
+.add-savings-popup-container,
+.edit-saving-popup-container {
+  z-index: 1000000 !important;
+}
+
+.edit-expense-popup-container #closePopup,
+.add-savings-popup-container #closePopup,
+.edit-saving-popup-container #closePopup {
+  z-index: 1000001 !important;
+}
+
+/* Animation for popup */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Additional positioning fixes */
+.edit-expense-popup-overlay,
+.add-savings-popup-overlay,
+.edit-saving-popup-overlay {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: 999999 !important;
+  pointer-events: auto !important;
+}
+
+.edit-expense-popup-container,
+.add-savings-popup-container,
+.edit-saving-popup-container {
+  position: relative !important;
+  z-index: 1000000 !important;
+  pointer-events: auto !important;
+}
+
+/* Ensure navbar stays visible - remove body overflow hidden */
+.edit-expense-popup-overlay,
+.add-savings-popup-overlay,
+.edit-saving-popup-overlay {
+  overflow: auto !important;
+}
+
+/* Force the popup to be rendered at the top level */
+.edit-expense-popup-overlay,
+.add-savings-popup-overlay,
+.edit-saving-popup-overlay {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  z-index: 999999 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+/* Ensure the popup container is properly positioned */
+.edit-expense-popup-container,
+.add-savings-popup-container,
+.edit-saving-popup-container {
+  position: relative !important;
+  z-index: 1000000 !important;
+  max-width: 550px !important;
+  width: 100% !important;
+  max-height: 85vh !important;
+  margin: auto !important;
+  background: #ffffff !important;
+  border-radius: 12px !important;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.5) !important;
+  overflow: hidden !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* Ensure navbar stays on top when popup is open */
+.navbar,
+.navbar *,
+.nav,
+.nav * {
+  z-index: 1000002 !important;
+  position: relative !important;
+}
+
+/* Ensure the popup doesn't interfere with navbar */
+.edit-expense-popup-overlay,
+.add-savings-popup-overlay,
+.edit-saving-popup-overlay {
+  pointer-events: none !important;
+}
+
+.edit-expense-popup-overlay .edit-expense-popup-container,
+.add-savings-popup-overlay .add-savings-popup-container,
+.edit-saving-popup-overlay .edit-saving-popup-container {
+  pointer-events: auto !important;
+}
+
+/* Allow navbar to be clickable even when popup is open */
+nav,
+nav *,
+.navbar,
+.navbar * {
+  pointer-events: auto !important;
+}
+
+/* Specific navbar z-index fixes */
+nav {
+  z-index: 1000002 !important;
+  position: relative !important;
+}
+
+.navWide,
+.navNarrow,
+.navbar-nav,
+.navbar-brand,
+.wideDiv,
+.narrowLinks {
+  z-index: 1000002 !important;
+  position: relative !important;
+}
+
+/* Ensure navbar links are clickable */
+.nav-link {
+  z-index: 1000003 !important;
+  position: relative !important;
+}
+
+/* Mobile navbar fixes */
+.navNarrow .fa-bars {
+  z-index: 1000003 !important;
+  position: relative !important;
+}
+
+.narrowLinks {
+  z-index: 1000004 !important;
+  position: relative !important;
+}
+
+/* Ensure the popup overlay doesn't block navbar interactions */
+.edit-expense-popup-overlay,
+.add-savings-popup-overlay,
+.edit-saving-popup-overlay {
+  pointer-events: none !important;
+}
+
+.edit-expense-popup-overlay .edit-expense-popup-container,
+.add-savings-popup-overlay .add-savings-popup-container,
+.edit-saving-popup-overlay .edit-saving-popup-container {
+  pointer-events: auto !important;
+}
+
+/* Allow navbar to be clickable even when popup is open */
+nav,
+nav *,
+.navbar,
+.navbar * {
+  pointer-events: auto !important;
+}
+
+/* Settings Page Specific Styles */
+.settings-page {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.settings-page .container-fluid {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.settings-page .card {
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.settings-page .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.settings-page .form-control {
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  padding: 12px 15px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.settings-page .form-control:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  outline: none;
+}
+
+.settings-page .btn {
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-transform: none;
+}
+
+.settings-page .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+.settings-page .col-form-label {
+  font-weight: 600;
+  color: #4a5568;
+  margin-bottom: 8px;
+}
+
+/* Dark mode settings */
+[data-theme="dark"] .settings-page {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+}
+
+[data-theme="dark"] .settings-page .card {
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  border: 1px solid #34495e;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .settings-page .form-control {
+  background: #34495e;
+  color: #ffffff;
+  border: 1px solid #4a5568;
+}
+
+[data-theme="dark"] .settings-page .form-control:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+[data-theme="dark"] .settings-page .col-form-label {
+  color: #e2e8f0;
+}
+
+/* Switch toggle styles */
+.switch-field {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.switch-field input[type="radio"] {
+  display: none;
+}
+
+.switch-field label {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+  background: #cbd5e1;
+  border-radius: 24px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.switch-field label:before {
+  content: '';
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background: #ffffff;
+  border-radius: 50%;
+  transition: 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.switch-field input[type="radio"]:checked + label {
+  background: #667eea;
+}
+
+.switch-field input[type="radio"]:checked + label:before {
+  transform: translateX(26px);
+}
+
+[data-theme="dark"] .switch-field label {
+  background: #4a5568;
+}
+
+[data-theme="dark"] .switch-field input[type="radio"]:checked + label {
+  background: #667eea;
+}
+
+/* Profile image styles */
+.profile-image-container {
+  position: relative;
+  display: inline-block;
+  margin: 20px auto;
+}
+
+.profile-image-container img {
+  border-radius: 50%;
+  border: 4px solid #667eea;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+  transition: all 0.3s ease;
+}
+
+.profile-image-container img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 35px rgba(102, 126, 234, 0.4);
+}
+
+/* Progress bar styles */
+.upload-progress {
+  width: 100%;
+  height: 6px;
+  background: #e2e8f0;
+  border-radius: 3px;
+  margin: 10px 0;
+  overflow: hidden;
+}
+
+.upload-progress-fill {
+  height: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+[data-theme="dark"] .upload-progress {
+  background: #4a5568;
+}
+
+/* Success message styles */
+.success-message {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 600;
+  animation: slideInDown 0.3s ease;
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design for settings */
+@media (max-width: 768px) {
+  .settings-page {
+    padding: 10px;
+  }
+  
+  .settings-page .card {
+    padding: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .settings-page .col-md-6 {
+    margin-bottom: 15px;
+  }
+  
+  .switch-field {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .settings-page {
+    padding: 5px;
+  }
+  
+  .settings-page .card {
+    padding: 15px;
+  }
+  
+  .settings-page .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+/* Ensure all text is visible */
+.settings-page * {
+  color: inherit;
+}
+
+.settings-page input,
+.settings-page select,
+.settings-page textarea {
+  color: inherit !important;
+}
+
+.settings-page label {
+  color: inherit !important;
+}
+
+.settings-page .card-title {
+  color: inherit !important;
+}
+
+.settings-page p {
+  color: inherit !important;
+}
+
+/* Force proper contrast */
+.settings-page .form-control {
+  color: #2c3e50 !important;
+}
+
+[data-theme="dark"] .settings-page .form-control {
+  color: #ffffff !important;
+}
+
+.settings-page .col-form-label {
+  color: #4a5568 !important;
+}
+
+[data-theme="dark"] .settings-page .col-form-label {
+  color: #e2e8f0 !important;
+}
+
+/* Profile Section Specific Styles */
+.settings-page .profile-section {
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  border-radius: 20px;
+  padding: 30px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.settings-page .profile-section h5 {
+  color: #ffffff !important;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.settings-page .profile-section p {
+  color: #ffffff !important;
+  margin-bottom: 10px;
+  font-size: 14px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.settings-page .profile-section i {
+  color: #667eea !important;
+  margin-right: 8px;
+}
+
+.settings-page .profile-section .fa-user {
+  margin-right: 10px !important;
+}
+
+/* Profile image container */
+.settings-page .profile-image-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.settings-page .profile-image-container img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #667eea;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+  margin: 0 auto 20px auto;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.settings-page .profile-image-container img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 35px rgba(102, 126, 234, 0.4);
+}
+
+/* Profile upload buttons */
+.settings-page .profile-upload-buttons {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.settings-page .profile-upload-buttons label,
+.settings-page .profile-upload-buttons button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  text-decoration: none;
+  display: inline-block;
+  margin: 5px;
+}
+
+.settings-page .profile-upload-buttons label:hover,
+.settings-page .profile-upload-buttons button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+.settings-page .profile-upload-buttons button[disabled] {
+  background: linear-gradient(135deg, #cbd5e1 0%, #94a3b8 100%);
+  cursor: not-allowed;
+  transform: none;
+}
+
+.settings-page .profile-upload-buttons .upload-btn {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+/* Profile info section */
+.settings-page .profile-info {
+  text-align: left;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+.settings-page .profile-info h5 {
+  color: #ffffff !important;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  font-size: 1.2rem;
+}
+
+.settings-page .profile-info p {
+  color: #ffffff !important;
+  margin-bottom: 10px;
+  font-size: 14px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  line-height: 1.5;
+}
+
+.settings-page .profile-info i {
+  color: #667eea !important;
+  margin-right: 8px;
+  width: 16px;
+  text-align: center;
+}
+
+/* Update password link */
+.settings-page .profile-info a {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff !important;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.settings-page .profile-info a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+  text-decoration: none;
+  color: #ffffff !important;
+}
+
+/* Progress bar for upload */
+.settings-page .upload-progress {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  margin: 10px 0;
+  overflow: hidden;
+}
+
+.settings-page .upload-progress-fill {
+  height: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+/* Ensure all profile text is white */
+.settings-page .col-lg-4 .card * {
+  color: #ffffff !important;
+}
+
+.settings-page .col-lg-4 .card h5,
+.settings-page .col-lg-4 .card p,
+.settings-page .col-lg-4 .card span,
+.settings-page .col-lg-4 .card div {
+  color: #ffffff !important;
+}
+
+/* Force white text for profile section */
+.settings-page .col-lg-4 {
+  color: #ffffff !important;
+}
+
+.settings-page .col-lg-4 * {
+  color: #ffffff !important;
+}
+
+/* Override any inherited colors */
+.settings-page .col-lg-4 .card-body * {
+  color: #ffffff !important;
+}
+
+.settings-page .col-lg-4 .card-title {
+  color: #ffffff !important;
+}
+
+.settings-page .col-lg-4 p {
+  color: #ffffff !important;
+} 
