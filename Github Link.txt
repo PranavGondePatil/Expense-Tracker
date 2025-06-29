@@ -1,1 +1,0 @@
-https://github.com/YogeshPrasanna/expense-manager-react
